@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "deep-paths",
+	"version": "${version}",
+	"name": "Deep Paths",
+	"description": "This is an addon for Cobblemon, that aims to add missing dimensions for legendaries",
+	"authors": [
+		"Bobolongs"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/deep-paths/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.bobo.deeppaths.DeepPaths"
+		],
+		"fabric-datagen": [
+			"net.bobo.deeppaths.DeepPathsDataGenerator"
+		],
+		"client": [
+			"net.bobo.deeppaths.DeepPathsClient"
+		]
+	},
+	"mixins": [
+		"deep-paths.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.7",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
