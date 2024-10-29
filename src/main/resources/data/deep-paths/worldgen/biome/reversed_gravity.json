@@ -1,0 +1,55 @@
+{
+  "temperature": 0.1,
+  "downfall": 0.3,
+  "has_precipitation": false,
+  "effects": {
+    "sky_color": 242060,
+    "fog_color": 242060,
+    "water_color": 4159204,
+    "water_fog_color": 329011,
+    "grass_color": 8606770,
+    "foliage_color": 8606770,
+    "mood_sound": {
+      "sound": "minecraft:ambient.warped_forest.loop",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2.0
+    },
+    "music": {
+      "sound": "minecraft:music.end",
+      "min_delay": 12000,
+      "max_delay": 24000,
+      "replace_current_music": true
+    }
+  },
+  "spawners": {
+    "ambient": [],
+    "creature": [],
+    "misc": [],
+    "monster": [],
+    "underground_water_creature": [],
+    "water_ambient": [],
+    "water_creature": []
+  },
+  "spawn_costs": {},
+  "carvers": {
+    "air": [
+      "minecraft:cave"
+    ],
+    "liquid": []
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "minecraft:ore_emerald"
+    ],
+    [],
+    [],
+    [],
+    []
+  ]
+}
