@@ -17,5 +17,6 @@ public class DeepPathsDataGenerator implements DataGeneratorEntrypoint {
 
 	public void buildRegistry(RegistryBuilder registryBuilder) {
 		registryBuilder.addRegistry(RegistryKeys.DIMENSION_TYPE, DistortionRealm::bootstrapType);
+
 	}
 }

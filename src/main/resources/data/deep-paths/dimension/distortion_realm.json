@@ -2,44 +2,44 @@
   "type": "deep-paths:distortion_type",
   "generator": {
     "type": "minecraft:noise",
-    "settings": "minecraft:overworld",
+    "settings": "deep-paths:distortion",
     "biome_source": {
       "type": "minecraft:multi_noise",
       "biomes": [
         {
           "biome": "deep-paths:reversed_gravity",
           "parameters": {
-            "temperature": 0.1,
-            "humidity": 0.3,
-            "continentalness": -0.5,
-            "erosion": 0.9,
-            "weirdness": 1,
-            "depth": -0.5,
-            "offset": 0.5
+            "temperature": 0,
+            "humidity": 0,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0.2
           }
         },
         {
           "biome": "deep-paths:waterfall_maze",
           "parameters": {
-            "temperature": 0.3,
-            "humidity": 0.5,
-            "continentalness": 0.5,
-            "erosion": 0.6,
-            "weirdness": 0,
+            "temperature": 0.1,
+            "humidity": 0.1,
+            "continentalness": 0.1,
+            "erosion": 0.1,
+            "weirdness": 0.1,
             "depth": 0,
-            "offset": 0.4
+            "offset": 0.2
           }
         },
         {
           "biome": "deep-paths:twisted_peaks",
           "parameters": {
-            "temperature": 0.2,
-            "humidity": 0.6,
-            "continentalness": 1,
-            "erosion": 0.4,
-            "weirdness": 0.4,
+            "temperature": -0.1,
+            "humidity": -0.1,
+            "continentalness": -0.1,
+            "erosion": -0.1,
+            "weirdness": -0.1,
             "depth": 0,
-            "offset": 0.3
+            "offset": 0.2
           }
         },
         {
@@ -47,9 +47,9 @@
           "parameters": {
             "temperature": 0.2,
             "humidity": 0.2,
-            "continentalness": 0.1,
-            "erosion": 0.5,
-            "weirdness": 0.09,
+            "continentalness": 0.2,
+            "erosion": 0.2,
+            "weirdness": 0.2,
             "depth": 0,
             "offset": 0.2
           }
@@ -57,13 +57,13 @@
         {
           "biome": "deep-paths:void_distortion",
           "parameters": {
-            "temperature": -0.5,
-            "humidity": 0.2,
-            "continentalness": -1,
-            "erosion": 0.5,
-            "weirdness": 0.25,
-            "depth": -1,
-            "offset": 0.1
+            "temperature": -0.2,
+            "humidity": -0.2,
+            "continentalness": -0.2,
+            "erosion": -0.2,
+            "weirdness": -0.2,
+            "depth": 0,
+            "offset": 0.2
           }
         }
       ]

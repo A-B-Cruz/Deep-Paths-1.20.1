@@ -3,24 +3,14 @@
   "downfall": 0.3,
   "has_precipitation": false,
   "effects": {
-    "sky_color": 242060,
-    "fog_color": 242060,
+    "sky_color": 2039358,
+    "fog_color": 2039358,
     "water_color": 4159204,
     "water_fog_color": 329011,
     "grass_color": 8606770,
     "foliage_color": 8606770,
-    "mood_sound": {
-      "sound": "minecraft:ambient.warped_forest.loop",
-      "tick_delay": 6000,
-      "block_search_extent": 8,
-      "offset": 2.0
-    },
-    "music": {
-      "sound": "minecraft:music.end",
-      "min_delay": 12000,
-      "max_delay": 24000,
-      "replace_current_music": true
-    }
+    "mood_sound": {},
+    "music": {}
   },
   "spawners": {
     "ambient": [],
@@ -33,9 +23,7 @@
   },
   "spawn_costs": {},
   "carvers": {
-    "air": [
-      "minecraft:cave"
-    ],
+    "air": [],
     "liquid": []
   },
   "features": [
@@ -50,6 +38,6 @@
     [],
     [],
     [],
-    []
+    ["deep-paths:distortion_tree"]
   ]
 }

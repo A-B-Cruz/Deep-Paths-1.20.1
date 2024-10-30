@@ -3,18 +3,13 @@
   "downfall": 1.0,
   "has_precipitation": false,
   "effects": {
-    "sky_color": 242060,
-    "fog_color": 242060,
+    "sky_color": 2039358,
+    "fog_color": 2039358,
     "water_color": 4159204,
     "water_fog_color": 329011,
     "grass_color": 8606770,
     "foliage_color": 8606770,
-    "mood_sound": {
-      "sound": "minecraft:ambient.cave",
-      "tick_delay": 6000,
-      "block_search_extent": 8,
-      "offset": 2.0
-    },
+    "mood_sound": {},
     "music": {
       "sound": "minecraft:music.nether.crimson_forest",
       "min_delay": 12000,
@@ -33,10 +28,7 @@
   },
   "spawn_costs": {},
   "carvers": {
-    "air": [
-      "minecraft:cave",
-      "minecraft:canyon"
-    ],
+    "air": [],
     "liquid": []
   },
   "features": [
@@ -53,6 +45,6 @@
     [
       "minecraft:seagrass_simple"
     ],
-    []
+    ["deep-paths:distortion_tree"]
   ]
 }
