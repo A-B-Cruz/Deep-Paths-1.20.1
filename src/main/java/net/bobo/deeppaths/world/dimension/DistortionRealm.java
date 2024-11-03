@@ -11,6 +11,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.dimension.DimensionOptions;
 import net.minecraft.world.dimension.DimensionType;
 
+
 import java.util.OptionalLong;
 
 public class DistortionRealm {
@@ -25,18 +26,18 @@ public class DistortionRealm {
     public static void bootstrapType(Registerable<DimensionType> context) {
         context.register(DISTORTION_DIMENSION_TYPE, new DimensionType(
                 OptionalLong.empty(), // Fixed time
-                true,  // skylight
-                false, // has ceiling
+                false,  // skylight
+                true, // has ceiling
                 false, // ultrawarm
-                true,  // natural
+                false,  // natural
                 1.0D,  // coordinate scale
-                true,  // has skylight
+                false,  // has skylight
                 false, // has raids
                 -64,   // min y
                 384,   // height
                 384,   // logical height
                 BlockTags.INFINIBURN_OVERWORLD,
-                new Identifier("distortion_realm"),
+                new Identifier(DeepPaths.MOD_ID, "distortion_realm"),
                 0.0f,  // ambient light
                 new DimensionType.MonsterSettings(false, false, UniformIntProvider.create(0, 7), 0)));
     }

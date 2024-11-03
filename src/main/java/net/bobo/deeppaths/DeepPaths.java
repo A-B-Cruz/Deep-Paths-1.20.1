@@ -1,6 +1,13 @@
 package net.bobo.deeppaths;
 
+
+import gravity_changer.GravityChangerMod;
+import gravity_changer.api.GravityChangerAPI;
+import gravity_changer.item.GravityChangerItemAOE;
+import net.bobo.deeppaths.block.DeepPathsBlocks;
 import net.bobo.deeppaths.datagen.DeepPathsWorldGenerator;
+import net.bobo.deeppaths.item.DeepPathsItemGroups;
+import net.bobo.deeppaths.item.DeepPathsItems;
 import net.fabricmc.api.ModInitializer;
 
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
@@ -10,6 +17,7 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+
 public class DeepPaths implements ModInitializer {
 
 	public static final String MOD_ID = "deep-paths";
@@ -18,7 +26,6 @@ public class DeepPaths implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
-
 		CustomPortalBuilder.beginPortal()
 				.frameBlock(Blocks.QUARTZ_BLOCK)
 				.lightWithItem(Items.STICK)
@@ -26,5 +33,9 @@ public class DeepPaths implements ModInitializer {
 				.tintColor(11, 3, 38)
 				.flatPortal()
 				.registerPortal();
+
+		DeepPathsBlocks.registerModBlocks();
+		DeepPathsItemGroups.registerItemGroups();
 	}
+
 }

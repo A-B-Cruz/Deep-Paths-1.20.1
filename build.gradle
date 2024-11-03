@@ -16,7 +16,28 @@ repositories {
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
+
+	mavenCentral()
 	maven {url = "https://maven.kyrptonaught.dev"}
+	maven {
+		url "https://maven.shedaniel.me/"
+	}
+	maven {
+		url "https://maven.terraformersmc.com/"
+	}
+	maven {
+		name = 'Ladysnake'
+		url = 'https://maven.ladysnake.org/releases'
+	}
+	maven { url = "https://jitpack.io" }
+
+	maven {
+		name = "Modrinth"
+		url = "https://api.modrinth.com/maven"
+		content {
+			includeGroup "maven.modrinth"
+		}
+	}
 }
 
 fabricApi {
@@ -29,12 +50,45 @@ dependencies {
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
+
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	//Portal API
 	modImplementation 'net.kyrptonaught:customportalapi:0.0.1-beta65-1.20'
 	include 'net.kyrptonaught:customportalapi:0.0.1-beta65-1.20'
+
+	//GravityChanger API
+	modImplementation("com.github.qouteall:GravityChanger:v1.1.2-mc1.20.1")
+	include "com.github.qouteall:GravityChanger:v1.1.2-mc1.20.1"
+
+	//GravityChanger Dependencies
+	modImplementation("net.fabricmc.fabric-api:fabric-api:${project.fabric_version}") {
+		exclude module: "fabric-gametest-api-v1"
+		// for now, the gametest module makes client unable to login dev env server
+	}
+	modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") {
+		exclude(group: "net.fabricmc.fabric-api")
+	}
+	modImplementation "maven.modrinth:modmenu:${modmenu_version}"
+
+	// Replace modImplementation with modApi if you expose components in your own API
+	modApi "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.cca_version}"
+	// Includes Cardinal Components API as a Jar-in-Jar dependency (optional but recommended)
+	include "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.cca_version}"
+
+	modApi "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.cca_version}"
+	// Includes Cardinal Components API as a Jar-in-Jar dependency (optional but recommended)
+	include "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.cca_version}"
+
+	modApi "dev.onyxstudios.cardinal-components-api:cardinal-components-world:${project.cca_version}"
+	// Includes Cardinal Components API as a Jar-in-Jar dependency (optional but recommended)
+	include "dev.onyxstudios.cardinal-components-api:cardinal-components-world:${project.cca_version}"
+
+	implementation("com.github.llamalad7.mixinextras:mixinextras-fabric:${mixin_extras_version}")
+	include("com.github.llamalad7.mixinextras:mixinextras-fabric:${mixin_extras_version}")
+	annotationProcessor("com.github.llamalad7.mixinextras:mixinextras-fabric:${mixin_extras_version}")
+
 }
 
 processResources {
