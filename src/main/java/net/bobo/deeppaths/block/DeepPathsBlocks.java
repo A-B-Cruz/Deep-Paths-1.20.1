@@ -2,6 +2,8 @@ package net.bobo.deeppaths.block;
 
 import net.bobo.deeppaths.DeepPaths;
 import net.bobo.deeppaths.block.custom.DistortedStoneBlock;
+import net.bobo.deeppaths.block.custom.DistortedTreeSaplingBlock;
+import net.bobo.deeppaths.world.tree.DistortedSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -17,6 +19,8 @@ public class DeepPathsBlocks {
     public static final Block DISTORTED_STONE = registerBlock("distorted_stone",
            new DistortedStoneBlock(FabricBlockSettings.copyOf(Blocks.TERRACOTTA)));
 
+    public static final Block DISTORTED_SAPLING = registerBlock("distorted_sapling",
+            new DistortedTreeSaplingBlock(new DistortedSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.DARK_OAK_SAPLING)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

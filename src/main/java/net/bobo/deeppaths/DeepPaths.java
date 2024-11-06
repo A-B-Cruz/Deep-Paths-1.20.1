@@ -1,15 +1,12 @@
 package net.bobo.deeppaths;
 
-
-import gravity_changer.GravityChangerMod;
-import gravity_changer.api.GravityChangerAPI;
-import gravity_changer.item.GravityChangerItemAOE;
 import net.bobo.deeppaths.block.DeepPathsBlocks;
-import net.bobo.deeppaths.datagen.DeepPathsWorldGenerator;
+import net.bobo.deeppaths.datagen.ModModelProvider;
 import net.bobo.deeppaths.item.DeepPathsItemGroups;
-import net.bobo.deeppaths.item.DeepPathsItems;
+import net.bobo.deeppaths.world.ModFeatureTypes;
+import net.bobo.deeppaths.world.tree.ModTrunkPlacerTypes;
+import net.bobo.deeppaths.world.tree.custom.DistortedTrunkPlacer;
 import net.fabricmc.api.ModInitializer;
-
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.Items;
@@ -36,6 +33,8 @@ public class DeepPaths implements ModInitializer {
 
 		DeepPathsBlocks.registerModBlocks();
 		DeepPathsItemGroups.registerItemGroups();
+		ModTrunkPlacerTypes.register();
+		ModFeatureTypes.register();
 	}
 
 }

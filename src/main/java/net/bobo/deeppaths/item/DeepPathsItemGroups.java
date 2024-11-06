@@ -18,6 +18,7 @@ public class DeepPathsItemGroups {
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.distortion"))
                     .icon(() -> new ItemStack(DeepPathsBlocks.DISTORTED_STONE)).entries((displayContext, entries) -> {
                         entries.add(DeepPathsBlocks.DISTORTED_STONE);
+                        entries.add(DeepPathsBlocks.DISTORTED_SAPLING);
             }).build());
 
     public static void registerItemGroups() {

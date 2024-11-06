@@ -1,5 +1,7 @@
 {
   "block.deep-paths.distorted_stone": "Distorted Stone",
 
-  "itemgroup.distortion": "Distortion Group"
+  "itemgroup.distortion": "Distortion Group",
+
+  "block.deep-paths.distorted_sapling": "Distorted Sapling"
 }

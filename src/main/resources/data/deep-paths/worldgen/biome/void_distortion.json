@@ -40,7 +40,9 @@
     [],
     [],
     [],
-    [],
-    ["deep-paths:distortion_tree"]
+    [
+      "deep-paths:distorted_tree_placed"
+    ],
+    []
   ]
 }

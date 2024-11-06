@@ -37,7 +37,7 @@ public class DistortionRealm {
                 384,   // height
                 384,   // logical height
                 BlockTags.INFINIBURN_OVERWORLD,
-                new Identifier(DeepPaths.MOD_ID, "distortion_realm"),
+                new Identifier("minecraft", "the_end"),
                 0.0f,  // ambient light
                 new DimensionType.MonsterSettings(false, false, UniformIntProvider.create(0, 7), 0)));
     }
